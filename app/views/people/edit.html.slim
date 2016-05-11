@@ -1,0 +1,16 @@
+h2 Edit person
+
+= form_for @person do |f|
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :age
+    = f.number_field :age, class: 'form-control'
+  .form-group
+    = f.label :occupation
+    = f.text_area :occupation, class: 'form-control'
+  p
+    = f.submit 'Create person', class: 'btn btn-default'
+
+p = link_to 'Back', root_path
