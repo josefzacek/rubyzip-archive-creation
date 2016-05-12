@@ -1,0 +1,23 @@
+h2 List of people
+
+hr
+
+table.table
+  thead
+    tr
+      th Name
+      th Age
+      th Occupation
+      th Details
+        
+  tbody
+    - @people.each do |person|
+      tr
+        td = person.name
+        td = person.age
+        td = person.occupation
+        td = link_to "See #{person.name} details >>", person_path(person), class: 'btn btn-default'
+
+
+p = link_to 'Add person', new_person_path, class: 'btn btn-primary'
+

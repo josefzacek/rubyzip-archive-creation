@@ -1,0 +1,9 @@
+h2 Person details
+
+p = @person.name
+p = @person.age
+p = @person.occupation
+
+p = link_to 'Home', people_path
+p = link_to 'Edit person', edit_person_path(@person)
+p = link_to 'Destroy person', @person, method: :delete, data: { confirm: 'Are you sure?' }  
