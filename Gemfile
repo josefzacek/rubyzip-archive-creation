@@ -27,6 +27,8 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
+gem 'rubyzip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,6 +41,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'pry-rails'
 end
 
 group :development do
