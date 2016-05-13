@@ -43,6 +43,17 @@ class PeopleController < ApplicationController
     redirect_to action: 'index'
   end
 
+  def download_zip
+    @people = Person.all
+    if !@people.blank?
+      compressed_file = Person.download_zip(@people)
+      send_data compressed_file.read, filename: "People record generated on #{Time.now.strftime("%d-%m-%Y at %H:%M")}.zip"
+    else
+      flash[:notice] = 'There are no records in database'
+      redirect_to action: 'index'
+    end
+  end
+
   private
 
   def person_params
