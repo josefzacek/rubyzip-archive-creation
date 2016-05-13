@@ -1,6 +1,7 @@
 class PeopleController < ApplicationController
   def index
     @people = Person.order('age')
+    @number_of_records = Person.count
   end
 
   def show
