@@ -43,6 +43,7 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'pry-rails'
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
 group :development do
