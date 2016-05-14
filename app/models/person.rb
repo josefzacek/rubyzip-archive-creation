@@ -1,3 +1,5 @@
+require 'zip'
+
 class Person < ActiveRecord::Base
   def self.download_zip(people)
     compressed_file = Zip::OutputStream.write_buffer(::StringIO.new('')) do |zos|
