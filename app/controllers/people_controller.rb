@@ -54,6 +54,15 @@ class PeopleController < ApplicationController
     end
   end
 
+  def generate_exel_spreadsheet
+    @people = Person.order('age')
+    respond_to do |format|
+      format.xlsx {
+        response.headers['Content-Disposition'] = 'attachement; filename="all_people.xlsx"'
+      }
+    end
+  end
+
   private
 
   def person_params
