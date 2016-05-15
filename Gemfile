@@ -27,7 +27,9 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
-gem 'rubyzip'
+gem 'rubyzip', '~> 1.0.0'
+
+gem 'axlsx_rails', '~> 0.4.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

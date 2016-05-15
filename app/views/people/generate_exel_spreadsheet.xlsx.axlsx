@@ -1,0 +1,18 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  highlight_cell = style.add_style(bg_color: 'FF7557',
+                                   alignment: { horizontal: :center })
+
+  wb.add_worksheet(name: 'People') do |sheet|
+    @people.each do |person|
+      sheet.add_row [person.name, person.age, person.occupation],
+                    style: [nil, highlight_cell, nil]
+
+      sheet.add_hyperlink location: url_for(action: 'show',
+                                            id: person.id,
+                                            only_path: false),
+                          ref: sheet.rows.last.cells.first
+    end
+  end
+end

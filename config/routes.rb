@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :people do
     collection do
       get 'download_zip'
+      get 'generate_exel_spreadsheet'
     end
   end
 
